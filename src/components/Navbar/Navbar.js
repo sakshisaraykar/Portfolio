@@ -26,7 +26,13 @@ function Navbar() {
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
 
-            <a href="/resume.pdf" className="resume-btn">
+            {/* Desktop Resume */}
+            <a
+              href="/resume/Sakshi_dev.Res.pdf"
+              className="resume-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </a>
           </div>
@@ -43,6 +49,7 @@ function Navbar() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="mobile-menu">
+
             <a href="#home" onClick={closeMenu}>
               Home
             </a>
@@ -67,9 +74,16 @@ function Navbar() {
               Contact
             </a>
 
-            <a href="/resume.pdf" onClick={closeMenu}>
+            {/* Mobile Resume */}
+            <a
+              href="/resume/Sakshi_dev.Res.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+            >
               Resume
             </a>
+
           </div>
         )}
       </nav>
