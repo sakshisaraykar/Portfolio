@@ -7,13 +7,14 @@ function Experience() {
           <span>EXPERIENCE</span>
           <h2>My Professional Journey</h2>
           <p>
-            My practical development experience and continuous learning
-            journey.
+            My practical software development experience and continuous
+            learning journey.
           </p>
         </div>
 
         <div className="timeline">
 
+          {/* SOFTWARE DEVELOPMENT INTERNSHIP */}
           <div className="timeline-item">
 
             <div className="timeline-dot"></div>
@@ -26,51 +27,65 @@ function Experience() {
                     SOFTWARE DEVELOPMENT
                   </span>
 
-                  <h3>Frontend / Full Stack Developer</h3>
+                  <h3>Software Development Intern</h3>
 
-                  <h4>Software Development Internship</h4>
+                  <h4>Primal Infosys Pvt. Ltd. | On-Site</h4>
+
+                  <p className="experience-duration">
+                    Jan 2026 – Sept 2026
+                  </p>
                 </div>
 
-                <span className="completed">
-                  Completed
-                </span>
+                
               </div>
 
               <p className="experience-description">
-                Worked on web application development and gained practical
-                experience in frontend development, API integration and
-                full-stack application development.
+                Gained practical software development experience by working
+                on responsive business websites and dynamic React.js
+                applications across different business domains.
               </p>
 
               <div className="experience-points">
 
                 <p>
                   <span>✓</span>
-                  Developed reusable React components and responsive UI.
+                  Designed and developed responsive websites using HTML,
+                  CSS, Bootstrap and JavaScript.
                 </p>
 
                 <p>
                   <span>✓</span>
-                  Integrated REST APIs with frontend applications.
+                  Converted static websites into dynamic React.js
+                  applications.
                 </p>
 
                 <p>
                   <span>✓</span>
-                  Worked with Git and GitHub for version control.
+                  Developed reusable and responsive UI components using
+                  React.js.
                 </p>
 
                 <p>
                   <span>✓</span>
-                  Improved practical knowledge of MERN stack development.
+                  Contributed to projects in E-commerce and Cab Booking
+                  domains.
+                </p>
+
+                <p>
+                  <span>✓</span>
+                  Worked on frontend development, UI enhancements and
+                  API integration.
                 </p>
 
               </div>
 
               <div className="experience-tech">
-                <span>React.js</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
                 <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
+                <span>React.js</span>
+                <span>Bootstrap</span>
+                <span>REST APIs</span>
                 <span>Git</span>
               </div>
 
@@ -78,6 +93,7 @@ function Experience() {
 
           </div>
 
+          {/* CONTINUOUS LEARNING */}
           <div className="timeline-item">
 
             <div className="timeline-dot"></div>
@@ -89,7 +105,7 @@ function Experience() {
               <h3>MERN Stack Development</h3>
 
               <p>
-                Continuously improving my skills in React, TypeScript,
+                Continuously improving my skills in React.js, TypeScript,
                 Node.js, Express.js, MongoDB, REST APIs and modern
                 development practices through hands-on projects.
               </p>
@@ -162,10 +178,8 @@ function Experience() {
           position: absolute;
           left: 1px;
           top: 5px;
-
           width: 20px;
           height: 20px;
-
           background: #2563eb;
           border: 4px solid #dbeafe;
           border-radius: 50%;
@@ -201,8 +215,15 @@ function Experience() {
         }
 
         .experience-card h4 {
+          color: #334155;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        .experience-duration {
           color: #64748b;
-          font-weight: 500;
+          font-size: 13px;
+          margin-top: 7px;
         }
 
         .completed {
@@ -225,6 +246,7 @@ function Experience() {
           margin: 10px 0;
           color: #475569;
           font-size: 14px;
+          line-height: 1.6;
         }
 
         .experience-points span {
@@ -260,6 +282,7 @@ function Experience() {
         }
 
         @media (max-width: 600px) {
+
           .experience-section {
             padding: 70px 20px;
           }
@@ -276,6 +299,7 @@ function Experience() {
           .learning-card {
             padding: 24px;
           }
+
         }
 
       `}</style>

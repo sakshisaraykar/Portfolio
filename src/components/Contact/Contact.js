@@ -1,9 +1,8 @@
+
 function Contact() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
-
-        {/* Section Heading */}
         <div className="section-heading">
           <span>CONTACT ME</span>
           <h2>Let's Work Together</h2>
@@ -14,52 +13,58 @@ function Contact() {
         </div>
 
         <div className="contact-content">
-
-          {/* Left Side */}
           <div className="contact-info">
-
             <h3>Get In Touch</h3>
 
             <p className="contact-description">
               I'm open to Full Stack, MERN Stack and Frontend Developer
-              opportunities. You can reach me through email or connect
-              with me on LinkedIn and GitHub.
+              opportunities. You can reach me through phone, email or
+              connect with me on LinkedIn and GitHub.
             </p>
 
-            {/* Email */}
+            {/* EMAIL */}
             <a
               href="mailto:sakshisaraykar@gmail.com"
               className="contact-item"
             >
               <div className="contact-icon">✉</div>
-
               <div>
                 <span>Email</span>
                 <strong>sakshisaraykar@gmail.com</strong>
               </div>
             </a>
 
-            {/* Location */}
+            {/* PHONE */}
+            <a
+              href="tel:+919309899215"
+              className="contact-item"
+            >
+              <div className="contact-icon">📞</div>
+              <div>
+                <span>Phone</span>
+                <strong>+91 9309899215</strong>
+              </div>
+            </a>
+
+            {/* LOCATION */}
             <div className="contact-item">
               <div className="contact-icon">📍</div>
-
               <div>
                 <span>Location</span>
-                <strong>India</strong>
+                <strong>Pune, Maharashtra, India</strong>
               </div>
             </div>
 
-            {/* Availability */}
+            {/* AVAILABLE FOR */}
             <div className="contact-item">
               <div className="contact-icon">💼</div>
-
               <div>
                 <span>Available For</span>
-                <strong>Full Stack / MERN Opportunities</strong>
+                <strong>Frontend Developer / MERN Stack</strong>
               </div>
             </div>
 
-            {/* Social Links */}
+            {/* SOCIAL LINKS */}
             <div className="social-links">
 
               <a
@@ -78,111 +83,35 @@ function Contact() {
                 LinkedIn ↗
               </a>
 
-              <a
-                href="mailto:sakshisaraykar@gmail.com"
-              >
+              <a href="mailto:sakshisaraykar@gmail.com">
                 Email ↗
               </a>
 
+              <a href="tel:+919876543210">
+                Call ↗
+              </a>
+
             </div>
-
           </div>
-
-          {/* Right Side - Contact Form */}
-          <div className="contact-form-box">
-
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you! Your message has been submitted.");
-              }}
-            >
-
-              <div className="form-row">
-
-                <div className="form-group">
-                  <label>Your Name</label>
-
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label>Email Address</label>
-
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-
-              </div>
-
-              <div className="form-group">
-                <label>Subject</label>
-
-                <input
-                  type="text"
-                  placeholder="Enter subject"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label>Message</label>
-
-                <textarea
-                  rows="6"
-                  placeholder="Write your message..."
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit">
-                Send Message →
-              </button>
-
-            </form>
-
-          </div>
-
         </div>
-
       </div>
 
       <style>{`
-
         .contact-section {
           padding: 100px 7%;
-          background:
-            radial-gradient(
-              circle at 10% 20%,
-              rgba(59, 130, 246, 0.10),
-              transparent 30%
-            ),
-            linear-gradient(
-              135deg,
-              #f8fbff 0%,
-              #eef6ff 50%,
-              #ffffff 100%
-            );
-
+          background: linear-gradient(135deg, #f8fbff, #eef6ff);
           color: #0f172a;
         }
 
         .contact-container {
-          max-width: 1200px;
+          max-width: 900px;
           margin: auto;
         }
 
         .section-heading {
           text-align: center;
           max-width: 650px;
-          margin: 0 auto 60px;
+          margin: 0 auto 55px;
         }
 
         .section-heading span {
@@ -195,7 +124,6 @@ function Contact() {
         .section-heading h2 {
           margin: 10px 0;
           font-size: 42px;
-          color: #0f172a;
         }
 
         .section-heading p {
@@ -204,21 +132,28 @@ function Contact() {
         }
 
         .contact-content {
-          display: grid;
-          grid-template-columns: 0.9fr 1.1fr;
-          gap: 60px;
-          align-items: start;
+          display: flex;
+          justify-content: center;
+        }
+
+        .contact-info {
+          width: 100%;
+          max-width: 700px;
+          padding: 40px;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 18px;
+          box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
         }
 
         .contact-info h3 {
-          font-size: 30px;
+          font-size: 26px;
           margin-bottom: 15px;
-          color: #0f172a;
         }
 
         .contact-description {
           color: #64748b;
-          line-height: 1.8;
+          line-height: 1.7;
           margin-bottom: 30px;
         }
 
@@ -226,19 +161,10 @@ function Contact() {
           display: flex;
           align-items: center;
           gap: 15px;
-          padding: 16px;
-          margin-bottom: 15px;
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
-          border-radius: 12px;
+          padding: 18px 0;
+          border-bottom: 1px solid #e2e8f0;
           text-decoration: none;
-          transition: 0.3s;
-        }
-
-        .contact-item:hover {
-          transform: translateX(5px);
-          border-color: #93c5fd;
-          box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+          color: inherit;
         }
 
         .contact-icon {
@@ -250,36 +176,35 @@ function Contact() {
           background: #eff6ff;
           border-radius: 10px;
           font-size: 20px;
+          flex-shrink: 0;
         }
 
         .contact-item span {
           display: block;
           color: #64748b;
-          font-size: 12px;
+          font-size: 13px;
           margin-bottom: 4px;
         }
 
         .contact-item strong {
-          display: block;
           color: #0f172a;
-          font-size: 14px;
+          font-size: 15px;
         }
 
         .social-links {
           display: flex;
-          gap: 10px;
-          margin-top: 25px;
+          gap: 12px;
           flex-wrap: wrap;
+          margin-top: 30px;
         }
 
         .social-links a {
-          padding: 10px 15px;
-          background: #ffffff;
-          border: 1px solid #cbd5e1;
+          padding: 10px 18px;
+          border: 1px solid #93c5fd;
           border-radius: 8px;
           color: #2563eb;
           text-decoration: none;
-          font-size: 13px;
+          font-size: 14px;
           font-weight: 600;
           transition: 0.3s;
         }
@@ -287,87 +212,9 @@ function Contact() {
         .social-links a:hover {
           background: #2563eb;
           color: #ffffff;
-          border-color: #2563eb;
         }
 
-        .contact-form-box {
-          padding: 35px;
-          background: #ffffff;
-          border: 1px solid #e2e8f0;
-          border-radius: 16px;
-          box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
-        }
-
-        .form-row {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 18px;
-        }
-
-        .form-group {
-          margin-bottom: 20px;
-        }
-
-        .form-group label {
-          display: block;
-          margin-bottom: 8px;
-          color: #334155;
-          font-size: 14px;
-          font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-          width: 100%;
-          padding: 13px 14px;
-          border: 1px solid #cbd5e1;
-          border-radius: 8px;
-          outline: none;
-          color: #0f172a;
-          background: #ffffff;
-          font-size: 14px;
-          transition: 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-          border-color: #2563eb;
-          box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
-        }
-
-        .form-group textarea {
-          resize: vertical;
-        }
-
-        .contact-form-box button {
-          width: 100%;
-          padding: 14px;
-          border: none;
-          border-radius: 8px;
-          background: #2563eb;
-          color: #ffffff;
-          font-size: 15px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: 0.3s;
-        }
-
-        .contact-form-box button:hover {
-          background: #1d4ed8;
-          transform: translateY(-2px);
-        }
-
-        @media (max-width: 850px) {
-
-          .contact-content {
-            grid-template-columns: 1fr;
-            gap: 40px;
-          }
-
-        }
-
-        @media (max-width: 600px) {
-
+        @media (max-width: 650px) {
           .contact-section {
             padding: 70px 20px;
           }
@@ -376,20 +223,14 @@ function Contact() {
             font-size: 32px;
           }
 
-          .form-row {
-            grid-template-columns: 1fr;
-            gap: 0;
+          .contact-info {
+            padding: 25px;
           }
-
-          .contact-form-box {
-            padding: 25px 20px;
-          }
-
         }
-
       `}</style>
     </section>
   );
 }
 
 export default Contact;
+

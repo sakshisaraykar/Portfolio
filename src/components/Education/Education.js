@@ -2,67 +2,48 @@ function Education() {
   return (
     <section className="education-section" id="education">
       <div className="education-container">
-
         <div className="section-heading">
-          <span>EDUCATION</span>
-          <h2>My Educational Background</h2>
+          <span>QUALIFICATION</span>
+          <h2>My Qualification</h2>
           <p>
-            Academic foundation combined with practical software
-            development skills.
+            My academic background in Mechanical Engineering and practical
+            learning in modern web development.
           </p>
         </div>
 
         <div className="education-card">
-
-          <div className="education-icon">
-            🎓
-          </div>
+          <div className="education-icon">🎓</div>
 
           <div className="education-content">
-
-            <span className="education-label">
-              BACHELOR'S DEGREE
-            </span>
-
+            <span className="education-year">Bachelor's Degree</span>
             <h3>Bachelor of Technology</h3>
-
-            <h4>Computer Science / Information Technology</h4>
+            <h4>Mechanical Engineering</h4>
 
             <p>
-              Built a strong foundation in programming, software development,
-              databases and web technologies while developing practical
-              full-stack projects.
+              Completed Bachelor of Technology in Mechanical Engineering,
+              developing problem-solving, analytical thinking and technical
+              skills.
             </p>
 
             <div className="education-tags">
-              <span>Programming</span>
+              <span>Mechanical Engineering</span>
+              <span>Problem Solving</span>
+              <span>Technical Skills</span>
               <span>Web Development</span>
-              <span>Database</span>
-              <span>Software Development</span>
             </div>
-
           </div>
-
         </div>
 
-        <div className="learning-box">
-
-          <div>
-            <span>PROFESSIONAL LEARNING</span>
-            <h3>MERN Stack Development</h3>
-          </div>
-
+        <div className="learning-card">
+          <h3>Additional Learning</h3>
           <p>
-            Practical learning through real-world projects using React,
-            Node.js, Express.js, MongoDB and modern development tools.
+            MERN Stack Development with hands-on experience in React.js,
+            Node.js, Express.js and MongoDB.
           </p>
-
         </div>
-
       </div>
 
       <style>{`
-
         .education-section {
           padding: 100px 7%;
           background: #ffffff;
@@ -70,14 +51,14 @@ function Education() {
         }
 
         .education-container {
-          max-width: 950px;
+          max-width: 1000px;
           margin: auto;
         }
 
         .section-heading {
           text-align: center;
           max-width: 650px;
-          margin: 0 auto 60px;
+          margin: 0 auto 55px;
         }
 
         .section-heading span {
@@ -99,88 +80,82 @@ function Education() {
 
         .education-card {
           display: flex;
-          gap: 30px;
-          padding: 40px;
-          background: #f8fbff;
+          gap: 25px;
+          padding: 35px;
           border: 1px solid #e2e8f0;
           border-radius: 18px;
-          box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
+          background: #f8fbff;
+          box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
         }
 
         .education-icon {
-          min-width: 70px;
+          width: 70px;
           height: 70px;
-
+          flex-shrink: 0;
           display: flex;
           align-items: center;
           justify-content: center;
-
           background: #dbeafe;
-          border-radius: 16px;
-          font-size: 35px;
+          border-radius: 15px;
+          font-size: 32px;
         }
 
-        .education-label,
-        .learning-box span {
+        .education-year {
           color: #2563eb;
-          font-size: 12px;
+          font-size: 13px;
           font-weight: 700;
-          letter-spacing: 1.5px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
         }
 
         .education-content h3 {
-          font-size: 28px;
-          margin: 8px 0;
+          margin: 10px 0 6px;
+          font-size: 25px;
         }
 
         .education-content h4 {
-          color: #475569;
-          font-weight: 500;
-          margin-bottom: 18px;
+          margin-bottom: 15px;
+          color: #2563eb;
+          font-size: 17px;
         }
 
         .education-content p {
           color: #64748b;
-          line-height: 1.8;
-          margin-bottom: 20px;
+          line-height: 1.7;
         }
 
         .education-tags {
           display: flex;
           flex-wrap: wrap;
-          gap: 8px;
+          gap: 10px;
+          margin-top: 20px;
         }
 
         .education-tags span {
-          padding: 7px 10px;
-          background: white;
-          color: #475569;
-          border: 1px solid #dbeafe;
+          padding: 7px 12px;
+          background: #e0edff;
+          color: #1d4ed8;
           border-radius: 6px;
           font-size: 12px;
+          font-weight: 600;
         }
 
-        .learning-box {
+        .learning-card {
           margin-top: 25px;
-          padding: 28px 32px;
-
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 30px;
-
+          padding: 28px 35px;
+          border-left: 4px solid #2563eb;
           background: #eff6ff;
-          border: 1px solid #dbeafe;
-          border-radius: 15px;
+          border-radius: 10px;
         }
 
-        .learning-box h3 {
-          margin-top: 8px;
+        .learning-card h3 {
+          margin-bottom: 10px;
+          font-size: 20px;
         }
 
-        .learning-box p {
+        .learning-card p {
           color: #64748b;
           line-height: 1.7;
-          margin: 0;
         }
 
         @media (max-width: 650px) {
@@ -194,15 +169,14 @@ function Education() {
 
           .education-card {
             flex-direction: column;
-            padding: 28px;
+            padding: 25px;
           }
 
-          .learning-box {
-            grid-template-columns: 1fr;
-            gap: 15px;
+          .education-icon {
+            width: 60px;
+            height: 60px;
           }
         }
-
       `}</style>
     </section>
   );

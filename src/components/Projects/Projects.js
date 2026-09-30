@@ -2,10 +2,13 @@ function Projects() {
   const projects = [
     {
       number: "01",
-      icon: "🐾",
-      title: "Pet Shop",
+      type: "MOVIE PLATFORM",
+      title: "CineHub",
+      link: "https://cinehub-git-sakshi-sarjya.vercel.app/",
+      image:
+        "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
       description:
-        "A modern e-commerce style pet shop application where users can explore pets, products and manage their shopping experience.",
+        "A movie streaming and discovery application where users can explore movies, search for titles and view detailed movie information.",
       technologies: [
         "React.js",
         "JavaScript",
@@ -14,53 +17,41 @@ function Projects() {
         "MongoDB",
       ],
       features: [
-        "Pet & Product Listing",
+        "Movie Listing",
         "Search & Filtering",
+        "Movie Details",
         "User Authentication",
-        "Shopping Cart",
       ],
+      github: "#",
     },
 
     {
       number: "02",
-      icon: "🏨",
-      title: "Hotel Booking System",
+      type: "BANKING MANAGEMENT",
+      title: "Banking Management System",
+      link: "https://banking-management-client.vercel.app/",
+      image:
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80",
       description:
-        "A full-stack hotel booking application that allows users to explore hotels, view rooms and manage their bookings.",
+        "A secure full-stack banking application that allows users to manage accounts, transfer money, make deposits and withdrawals, and track transactions.",
       technologies: [
         "React.js",
-        "JavaScript",
+        "TypeScript",
+        "Tailwind CSS",
         "Node.js",
         "Express.js",
         "MongoDB",
+        "JWT",
       ],
       features: [
-        "Hotel & Room Listing",
-        "Room Booking",
         "User Authentication",
-        "Booking Management",
+        "Account Management",
+        "Money Transfer",
+        "Deposit & Withdrawal",
+        "Loan Management",
+        "Transaction History",
       ],
-    },
-
-    {
-      number: "03",
-      icon: "🏢",
-      title: "Society Management App",
-      description:
-        "A society management application designed to simplify resident, maintenance, complaint and notice management.",
-      technologies: [
-        "React.js",
-        "JavaScript",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-      ],
-      features: [
-        "Resident Management",
-        "Maintenance Management",
-        "Complaint Management",
-        "Notice & Updates",
-      ],
+      github: "#",
     },
   ];
 
@@ -68,6 +59,7 @@ function Projects() {
     <section className="projects-section" id="projects">
       <div className="projects-container">
 
+        {/* SECTION HEADING */}
         <div className="section-heading">
           <span>MY PROJECTS</span>
 
@@ -79,72 +71,107 @@ function Projects() {
           </p>
         </div>
 
+        {/* PROJECT GRID */}
         <div className="projects-grid">
+          {projects.map((project) => (
+            <div className="project-card" key={project.number}>
 
-          {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+              {/* PROJECT IMAGE */}
+              <div className="project-preview">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
 
-              <div className="project-top">
+                <div className="image-overlay"></div>
 
-                <div className="project-icon">
-                  {project.icon}
+                <div className="preview-topbar">
+                  <div className="browser-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <div className="preview-url">
+                    {project.type}
+                  </div>
                 </div>
 
-                <span className="project-number">
+                <span className="preview-number">
                   {project.number}
                 </span>
 
+                <div className="image-project-title">
+                  <h4>{project.title}</h4>
+                  <span>{project.type}</span>
+                </div>
               </div>
 
-              <h3>{project.title}</h3>
+              {/* PROJECT DETAILS */}
+              <div className="project-content">
+                <h3>{project.title}</h3>
 
-              <p className="project-description">
-                {project.description}
-              </p>
+                <p className="project-description">
+                  {project.description}
+                </p>
 
-              <div className="technology-list">
+                {/* TECHNOLOGIES */}
+                <div className="technology-list">
+                  {project.technologies.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
 
-                {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex}>
-                    {tech}
-                  </span>
-                ))}
+                {/* FEATURES */}
+                <div className="features">
+                  <h4>Key Features</h4>
 
-              </div>
+                  {project.features.map((feature) => (
+                    <p key={feature}>
+                      <span>✓</span>
+                      {feature}
+                    </p>
+                  ))}
+                </div>
 
-              <div className="features">
+                {/* BUTTONS */}
+                <div className="project-buttons">
 
-                <h4>Key Features</h4>
+                  {/* VIEW PROJECT */}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project ↗
+                  </a>
 
-                {project.features.map((feature, featureIndex) => (
-                  <p key={featureIndex}>
-                    <span>✓</span>
-                    {feature}
-                  </p>
-                ))}
+                  {/* GITHUB */}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub ↗
+                  </a>
 
-              </div>
-
-              <div className="project-buttons">
-
-                <a href="#contact">
-                  View Project
-                </a>
-
-                <a href="#contact">
-                  GitHub ↗
-                </a>
-
+                </div>
               </div>
 
             </div>
           ))}
-
         </div>
-
       </div>
 
+      {/* =========================
+          CSS
+      ========================= */}
       <style>{`
+
+        /* =========================
+           SECTION
+        ========================= */
 
         .projects-section {
           padding: 100px 7%;
@@ -156,6 +183,10 @@ function Projects() {
           max-width: 1200px;
           margin: auto;
         }
+
+        /* =========================
+           HEADING
+        ========================= */
 
         .section-heading {
           text-align: center;
@@ -181,48 +212,168 @@ function Projects() {
           line-height: 1.7;
         }
 
+        /* =========================
+           PROJECT GRID
+        ========================= */
+
         .projects-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, minmax(0, 500px));
+          justify-content: center;
           gap: 25px;
         }
 
+        /* =========================
+           CARD
+        ========================= */
+
         .project-card {
-          padding: 30px;
+          overflow: hidden;
           background: #f8fbff;
           border: 1px solid #e2e8f0;
-          border-radius: 16px;
+          border-radius: 18px;
           transition: all 0.3s ease;
         }
 
         .project-card:hover {
           transform: translateY(-8px);
           border-color: #93c5fd;
-          box-shadow: 0 20px 45px rgba(37, 99, 235, 0.10);
+          box-shadow:
+            0 20px 45px rgba(37, 99, 235, 0.12);
         }
 
-        .project-top {
+        /* =========================
+           PROJECT IMAGE
+        ========================= */
+
+        .project-preview {
+          position: relative;
+          height: 235px;
+          overflow: hidden;
+          background: #0f172a;
+        }
+
+        .project-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition:
+            transform 0.5s ease,
+            filter 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+          transform: scale(1.07);
+          filter: brightness(0.85);
+        }
+
+        /* =========================
+           IMAGE OVERLAY
+        ========================= */
+
+        .image-overlay {
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(
+              to bottom,
+              rgba(15, 23, 42, 0.45),
+              rgba(15, 23, 42, 0.05) 40%,
+              rgba(15, 23, 42, 0.85)
+            );
+        }
+
+        /* =========================
+           BROWSER BAR
+        ========================= */
+
+        .preview-topbar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 38px;
+          padding: 0 14px;
           display: flex;
-          justify-content: space-between;
           align-items: center;
-          margin-bottom: 25px;
+          gap: 12px;
+          background: rgba(255, 255, 255, 0.92);
+          border-bottom: 1px solid
+            rgba(226, 232, 240, 0.8);
         }
 
-        .project-icon {
-          width: 55px;
-          height: 55px;
+        .browser-dots {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #eff6ff;
-          border-radius: 12px;
-          font-size: 28px;
+          gap: 5px;
         }
 
-        .project-number {
+        .browser-dots span {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: #94a3b8;
+        }
+
+        .preview-url {
+          font-size: 8px;
+          color: #64748b;
+          letter-spacing: 0.7px;
+          font-weight: 700;
+        }
+
+        /* =========================
+           NUMBER
+        ========================= */
+
+        .preview-number {
+          position: absolute;
+          top: 52px;
+          right: 15px;
+          padding: 6px 11px;
+          background: rgba(255, 255, 255, 0.95);
           color: #2563eb;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 800;
+          box-shadow:
+            0 5px 15px rgba(15, 23, 42, 0.12);
+        }
+
+        /* =========================
+           IMAGE TITLE
+        ========================= */
+
+        .image-project-title {
+          position: absolute;
+          left: 20px;
+          bottom: 18px;
+          color: white;
+          z-index: 2;
+        }
+
+        .image-project-title h4 {
+          margin: 0;
           font-size: 20px;
           font-weight: 800;
+          text-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.35);
+        }
+
+        .image-project-title span {
+          display: block;
+          margin-top: 4px;
+          font-size: 9px;
+          letter-spacing: 1.5px;
+          opacity: 0.85;
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .project-content {
+          padding: 28px;
         }
 
         .project-card h3 {
@@ -237,6 +388,10 @@ function Projects() {
           font-size: 15px;
           min-height: 82px;
         }
+
+        /* =========================
+           TECHNOLOGIES
+        ========================= */
 
         .technology-list {
           display: flex;
@@ -253,6 +408,10 @@ function Projects() {
           font-size: 12px;
           font-weight: 600;
         }
+
+        /* =========================
+           FEATURES
+        ========================= */
 
         .features {
           padding-top: 18px;
@@ -277,6 +436,10 @@ function Projects() {
           color: #2563eb;
           font-weight: bold;
         }
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .project-buttons {
           display: flex;
@@ -311,11 +474,20 @@ function Projects() {
           background: #eff6ff;
         }
 
+        /* =========================
+           TABLET
+        ========================= */
+
         @media (max-width: 1000px) {
           .projects-grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
           }
         }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 650px) {
           .projects-section {
@@ -328,10 +500,15 @@ function Projects() {
 
           .projects-grid {
             grid-template-columns: 1fr;
+            gap: 20px;
           }
 
           .project-description {
             min-height: auto;
+          }
+
+          .project-preview {
+            height: 220px;
           }
         }
 
