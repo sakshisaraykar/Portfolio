@@ -1,3 +1,4 @@
+
 function Experience() {
   return (
     <section className="experience-section" id="experience">
@@ -7,119 +8,114 @@ function Experience() {
           <span>EXPERIENCE</span>
           <h2>My Professional Journey</h2>
           <p>
-            My practical software development experience and continuous
-            learning journey.
+            My professional software development experience and
+            continuous learning journey.
           </p>
         </div>
 
         <div className="timeline">
 
-          {/* SOFTWARE DEVELOPMENT INTERNSHIP */}
+          {/* PROFESSIONAL EXPERIENCE */}
           <div className="timeline-item">
-
             <div className="timeline-dot"></div>
 
             <div className="experience-card">
-
               <div className="experience-header">
                 <div>
                   <span className="experience-label">
                     SOFTWARE DEVELOPMENT
                   </span>
 
-                  <h3>Software Development Intern</h3>
+                  <h3>Frontend Developer</h3>
 
                   <h4>Primal Infosys Pvt. Ltd. | On-Site</h4>
 
                   <p className="experience-duration">
-                    Jan 2026 – Sept 2026
+                    2 Years of Experience
                   </p>
                 </div>
-
-                
               </div>
 
               <p className="experience-description">
-                Gained practical software development experience by working
-                on responsive business websites and dynamic React.js
-                applications across different business domains.
+                Experienced in developing responsive business websites
+                and dynamic web applications using React.js and modern
+                frontend technologies. Worked on building reusable UI
+                components, improving user interfaces, and integrating
+                REST APIs across different business domains.
               </p>
 
               <div className="experience-points">
-
                 <p>
                   <span>✓</span>
-                  Designed and developed responsive websites using HTML,
-                  CSS, Bootstrap and JavaScript.
+                  Developed responsive and user-friendly web interfaces
+                  using HTML5, CSS3 and JavaScript.
                 </p>
 
                 <p>
                   <span>✓</span>
-                  Converted static websites into dynamic React.js
-                  applications.
+                  Built dynamic React.js applications using reusable
+                  components, props, state and hooks.
                 </p>
 
                 <p>
                   <span>✓</span>
-                  Developed reusable and responsive UI components using
-                  React.js.
+                  Integrated REST APIs to fetch, display and manage
+                  application data.
                 </p>
 
                 <p>
                   <span>✓</span>
-                  Contributed to projects in E-commerce and Cab Booking
+                  Worked on projects across E-commerce and Cab Booking
                   domains.
                 </p>
 
                 <p>
                   <span>✓</span>
-                  Worked on frontend development, UI enhancements and
-                  API integration.
+                  Improved UI responsiveness, fixed frontend bugs and
+                  enhanced application usability.
                 </p>
 
+                <p>
+                  <span>✓</span>
+                  Collaborated on frontend development, component
+                  reusability and application maintenance.
+                </p>
               </div>
 
               <div className="experience-tech">
                 <span>HTML5</span>
                 <span>CSS3</span>
-                <span>JavaScript</span>
+                <span>JavaScript (ES6+)</span>
                 <span>React.js</span>
-                <span>Bootstrap</span>
+                <span>TypeScript</span>
+                <span>Tailwind CSS</span>
                 <span>REST APIs</span>
-                <span>Git</span>
+                <span>Git & GitHub</span>
               </div>
-
             </div>
-
           </div>
 
           {/* CONTINUOUS LEARNING */}
           <div className="timeline-item">
-
             <div className="timeline-dot"></div>
 
             <div className="learning-card">
-
               <span>CONTINUOUS LEARNING</span>
 
-              <h3>MERN Stack Development</h3>
+              <h3>Modern Web Development</h3>
 
               <p>
                 Continuously improving my skills in React.js, TypeScript,
-                Node.js, Express.js, MongoDB, REST APIs and modern
-                development practices through hands-on projects.
+                Next.js, Node.js, Express.js, MongoDB and REST APIs
+                through hands-on projects and modern development practices.
               </p>
-
             </div>
-
           </div>
 
         </div>
-
       </div>
 
       <style>{`
-
         .experience-section {
           padding: 100px 7%;
           background: #f8fbff;
@@ -226,16 +222,6 @@ function Experience() {
           margin-top: 7px;
         }
 
-        .completed {
-          height: fit-content;
-          padding: 7px 12px;
-          background: #dcfce7;
-          color: #15803d;
-          border-radius: 20px;
-          font-size: 12px;
-          font-weight: 700;
-        }
-
         .experience-description {
           margin: 22px 0;
           color: #64748b;
@@ -282,7 +268,6 @@ function Experience() {
         }
 
         @media (max-width: 600px) {
-
           .experience-section {
             padding: 70px 20px;
           }
@@ -299,9 +284,7 @@ function Experience() {
           .learning-card {
             padding: 24px;
           }
-
         }
-
       `}</style>
     </section>
   );
